@@ -44,7 +44,7 @@ The base address of all endpoints will be `http://localhost:8080` by default if 
 ### Main Endpoints
 
 | Action | Endpoint | Example | Description |
-| ------ | -------- | ------ | ---- | -------- | ----------- |
+| ------ | -------- | ------- | ----------- |
 | Create Ledger | `/fdb/new-db` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-new-db) | Creates a new ledger | 
 | List Ledgers | `/fdb/dbs` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-dbs) | Returns list of all ledgers in transactor group |
 | Export Ledger | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/export` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-export) | Exports an existing ledger into either .xml or .ttl file |
