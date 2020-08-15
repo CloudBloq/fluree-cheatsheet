@@ -1,36 +1,4 @@
-# Fluree
-
-Fluree is a web3 data platform. It leverages Blockchain technology to make storage of data secure, available and decentralized. This cheatsheet features some API endpoints to help you get started with FLuree. 
-
-
-<br>
-
-## Keywords
-
-| Keyword | Description |
-| ------- | ----------- |
-| Auth | Auth is used to determine identity in Fluree that helps in restricting data access |
-| Block | Contains a group of atomic updates made to a Ledger at a given point in time. Each block is linked to the previous block |
-| Collection | Collections are analogous to a table in a relational database |
-| Flakes | A specific fact about a subject at a specific point in time |
-| Ledger | All instances of a specific db across all the blocks is called a Ledger. |
-| Object | Value of an Subject - Predicate combination |
-| Predicates | Predicates are analogous to columns in a relational database |
-| Query | Query is a read operation on a ledger. It does not lead to creation of Flakes |
-| RDF Triple | Subject - Predicate - Object together is called a RDF Triple |
-| Role | Role in Fluree can have multiple Rules to implement security |
-| Rule | Rule in Fluree is used to restrict access to Collections inside a Ledger. Each rule can have multiple associated Smart Functions |
-| Schema | Schema in Fluree consists of Collections and Predicates |
-| Smart Functions | Smart Functions in Fluree help to set permissions on data |
-| Snapshot | A backup of a Ledger upto a specific Block |
-| Subject | Subject is an item in a collection. It is analogous to a row in a relational database |
-| Transaction | Any operation on a Ledger that leads to generation of Flakes like create, update and delete |
-| User | User is one of the default collection available in every Ledger. User can have multiple Roles and Auth |
-
-
-<br>
-
-## API Endpoints
+# API Endpoints
 
 There are two types of Fluree we can use:
 
@@ -40,8 +8,9 @@ There are two types of Fluree we can use:
 
 The base address of all endpoints will be `http://localhost:8080` by default if we are using Fluree Anywhere. Fluree On Demand users will have to set up an Account and then login into Fluree and get a token. This token can then be used to call the Fluree API. 
 
+<br>
 
-### Main Endpoints
+## Main Endpoints
 
 | Action | Endpoint | Example | Description |
 | ------ | -------- | ------- | ----------- |
@@ -63,3 +32,14 @@ The base address of all endpoints will be `http://localhost:8080` by default if 
 | Command | `/fdb/[NETWORK-NAME]/[DBID]/command` | [Example](https://docs.flur.ee/guides/identity/signatures#signed-transactions) | Send signed queries and transactions in FlureeQL syntax |
 | Reindex Ledger | `/fdb/[NETWORK-NAME]/[DBID]/reindex` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-reindex) | Reindex the specified ledger |
 | Hide Flakes | `/fdb/[NETWORK-NAME]/[DBID]/hide` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-hide) | Hide Flakes that match the given pattern |
+
+
+<br><br>
+
+## Test Endpoints
+
+| Action | Endpoint | Example | Description |
+| ------ | -------- | ------- | ----------- |
+| Generate Flakes | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/gen-flakes` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-gen-flakes) | Returns the list of flakes that would be added to a ledger if a given transaction is issued | 
+| Query With | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/query-with` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-query-with) | Returns the results of a query using the existing database flakes, including flakes that are provided with the query. |
+| Test Transact With | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/test-transact-with` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-test-transact-with) | Given a valid set of flakes that could be added to the database at a given point in time and a transaction, returns the flakes that would be added to a ledger if a given transaction is issued. |
