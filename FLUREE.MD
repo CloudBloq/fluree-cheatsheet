@@ -5,7 +5,7 @@ Fluree is a web3 data platform. It leverages Blockchain technology to make stora
 
 <br>
 
-## Main Keywords
+## Keywords
 
 | Keyword | Description |
 | ------- | ----------- |
@@ -24,7 +24,7 @@ Fluree is a web3 data platform. It leverages Blockchain technology to make stora
 
 <br>
 
-## Technical Keywords
+## Concepts
 
 | Keyword | Description |
 | ------- | ----------- |

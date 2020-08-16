@@ -43,3 +43,27 @@ The base address of all endpoints will be `http://localhost:8080` by default if 
 | Generate Flakes | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/gen-flakes` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-gen-flakes) | Returns the list of flakes that would be added to a ledger if a given transaction is issued | 
 | Query With | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/query-with` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-query-with) | Returns the results of a query using the existing database flakes, including flakes that are provided with the query. |
 | Test Transact With | `/fdb/[NETWORK-NAME]/[DBNAME-OR-DBID]/test-transact-with` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-test-transact-with) | Given a valid set of flakes that could be added to the database at a given point in time and a transaction, returns the flakes that would be added to a ledger if a given transaction is issued. |
+
+
+<br><br>
+
+## Password Authentication Endpoints
+
+| Action | Endpoint | Example | Description |
+| ------ | -------- | ------- | ----------- |
+| Generate Token | `/fdb/[NETWORK-NAME]/[DBID]/pw/generate` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-generate) | Returns a valid token for a given user or role. Sets a valid password for that user or role. | 
+| Renew Token | `/fdb/[NETWORK-NAME]/[DBID]/pw/renew` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-renew) | Given a token in the header and a new expiration time, returns a new token for a given user or role. |
+| Login | `/fdb/[NETWORK-NAME]/[DBID]/pw/login` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-login) | Given a password and user or auth id, returns a valid token. |
+
+
+<br><br>
+
+## Other Endpoints
+
+| Action | Method | Endpoint | Example | Description |
+| ------ | ------ | -------- | ------- | ----------- |
+| Block Stats | POST | `/fdb/[NETWORK-NAME]/[DBID]/block-range-with-txn` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-block-range-with-txn) | Returns block data, signatures, instant, hash, flakes and transactions | 
+| Health | GET | `/fdb/health` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-health) | Can be used to test application status | 
+| Ledger Stats | POST | `/fdb/[NETWORK-NAME]/[DBID]/ledger-stats` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-ledger-stats) | General ledger stats, including status, # flakes, current block, and size (kb). | 
+| Generate Public / Private keys | GET | `/fdb/new-keys` | [Example](https://docs.flur.ee/api/downloaded-endpoints/downloaded-examples#-new-keys) | Get a pair of Public / Private Keys | 
+
