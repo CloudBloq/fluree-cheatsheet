@@ -1,2 +1,0 @@
-# fluree-cheatsheet
-fluree cheatsheet
